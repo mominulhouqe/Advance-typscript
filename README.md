@@ -58,3 +58,22 @@ try {
     // Type assertion: treat 'error' as a 'CustomError' and extract the 'message' property
     console.log("Error:", (error as CustomError).message);
 }
+```
+# TypeScript Interface Extension Example
+
+This is an example of how to extend TypeScript interfaces to build upon the structure of existing interfaces.
+
+## Introduction
+
+In TypeScript, interfaces allow you to define the structure of objects, and you can also extend them to inherit properties and methods from other interfaces. This is a powerful feature that promotes code reusability and maintainability.
+
+## Base Interface
+
+Let's start with a base interface that represents a basic user object:
+
+```typescript
+interface User2 {
+    name: string;
+    age: number;
+}
+```
