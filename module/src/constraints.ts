@@ -1,3 +1,5 @@
+{
+
 // Define a generic function that adds a "course" property to a student object.
 const addTocourseStudent = <T extends { id: number, name: string, email: string }>(student: T) => {
     const course = "next level web devs"; // Set the course name.
@@ -39,3 +41,11 @@ const student2 = addTocourseStudent({
     email: "rajibur@gmail.com",
     devsType: 'bmwl'
 });
+
+
+
+
+
+
+}
+
