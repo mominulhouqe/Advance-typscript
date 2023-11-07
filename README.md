@@ -77,3 +77,50 @@ interface User2 {
     age: number;
 }
 ```
+
+# Generic Constraints in TypeScript
+
+This repository demonstrates the usage of generic constraints in TypeScript. It includes a function that adds a "course" property to a student object, and it enforces certain constraints on the input types.
+
+## Table of Contents
+
+- [Getting Started](#getting-started)
+- [Usage](#usage)
+- [Generic Function](#generic-function)
+- [Examples](#examples)
+- [Issues](#issues)
+
+## Getting Started
+
+- Usage
+- In TypeScript, generic constraints allow you to specify certain conditions or constraints on the types that can be used with a generic function. In this repository, the addTocourseStudent function enforces constraints on the input types to ensure that they have id, name, and email properties of specific types.
+
+**Generic Function**
+The addTocourseStudent function is defined as follows:
+
+
+``
+Example: 
+
+const addTocourseStudent = <T extends { id: number, name: string, email: string }>(student: T) => {
+    const course = "next level web devs";
+    return {
+        ...student,
+        course
+    };
+}
+
+
+const student1 = addTocourseStudent<{
+    id: number,
+    name: string,
+    email: string,
+    devsType: string
+}>({
+    id: 23,
+    name: "mominul",
+    email: "mominul@gmail.com",
+    devsType: "nextdvs"
+});
+
+``
