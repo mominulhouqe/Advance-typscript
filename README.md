@@ -99,7 +99,7 @@ This repository demonstrates the usage of generic constraints in TypeScript. It 
 The addTocourseStudent function is defined as follows:
 
 
-``
+```typescript
 Example: 
 
 const addTocourseStudent = <T extends { id: number, name: string, email: string }>(student: T) => {
@@ -123,4 +123,4 @@ const student1 = addTocourseStudent<{
     devsType: "nextdvs"
 });
 
-``
+```
